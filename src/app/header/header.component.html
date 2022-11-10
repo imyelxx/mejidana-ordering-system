@@ -1,0 +1,24 @@
+<!--start:: header-->
+<section class="header-container">
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <div  routerLink="/" class="proj-logo">
+            <img class="proj-logo-img" src="./assets/shop.png"/>
+        </div>
+        <div class="proj-name" fxFlex>Ecommerce</div>
+        <!---->
+        <div class="cart-menu">
+            <span class="material-icons cart-icon">shopping_cart</span>
+        </div>
+        <!---->
+        <div class="user-menu">
+            <button mat-button [matMenuTriggerFor]="menu">Hi, Melrose</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/">Product Catalog</button>
+            <button mat-menu-item routerLink="/admin/product-management">Product Management</button>
+            <button mat-menu-item routerLink="/admin/order-management">Order Management</button>
+            <button mat-menu-item>Logout</button>
+            </mat-menu>
+        </div>
+    </div>
+</section>
+<!--end:: header-->

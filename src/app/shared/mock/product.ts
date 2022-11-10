@@ -1,0 +1,10 @@
+export const products = [
+    {id: 1, productName: 'Product 1', productDescription: 'None', imgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp14-silver-select-202110?wid=1808&hei=1680&fmt=jpeg&qlt=90&.v=1632788573000', stock: 5, price: 53},
+    {id: 2, productName: 'Product 2', productDescription: 'None', imgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664472289661', stock: 5, price: 53},
+    {id: 3, productName: 'Product 3', productDescription: 'None', imgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-card-40-iphone14-202209_FMT_WHH?wid=508&hei=472&fmt=p-jpg&qlt=95&.v=1661958160494', stock: 7, price: 77},
+    {id: 4, productName: 'Product 4', productDescription: 'None', imgUrl: 'https://images-americanas.b2w.io/produtos/01/00/img/5884147/1/5884147146_1GG.jpg', stock: 75, price: 65},
+    {id: 5, productName: 'Product 5', productDescription: 'None', imgUrl: 'https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703565/Croma%20Assets/Communication/Mobiles/Images/261935_nxd0zn.png/mxw_640,f_auto', stock: 88, price: 440},
+    {id: 6, productName: 'Product 6', productDescription: 'None', imgUrl: 'https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662703372/Croma%20Assets/Communication/Mobiles/Images/261990_hmp7jd.png/mxw_640,f_auto', stock: 67, price: 76},
+    {id: 7, productName: 'Product 7', productDescription: 'None', imgUrl: 'https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png', stock: 87, price: 67},
+    {id: 8, productName: 'Product 8', productDescription: 'None', imgUrl: 'https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png', stock: 76, price: 78},
+  ];

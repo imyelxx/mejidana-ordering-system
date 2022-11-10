@@ -1,0 +1,56 @@
+<section class="product-catalog-container" fxLayout="column">
+        <div class="product-card-header"  fxLayout="row">
+            <div class="">
+                <mat-form-field appearance="fill">
+                    <mat-label>Display</mat-label>
+                    <mat-select>
+                      <mat-option value="Phones">Phones</mat-option>
+                      <mat-option value="Laptop">Laptop</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxFlex></div>
+            <div class="mr-5">
+                <mat-form-field appearance="fill">
+                    <mat-label>Sort</mat-label>
+                    <mat-select>
+                      <mat-option value="Phones">Highest to lowest price</mat-option>
+                      <mat-option value="Laptop">Lowest to highest price</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mr-5">
+                <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                    <mat-icon>filter_list</mat-icon>
+                </button>
+            </div>
+            <div class="">
+                <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+                    <mat-icon>sort_by_alpha</mat-icon>
+                  </button>
+            </div>
+        </div>
+
+        <div class="product-cards-container" fxLayout="row wrap">
+           <!------->
+           <ng-container *ngFor="let product of productList">
+            <div class="product-cards-item" fxLayout="column">
+                <div class="product-img-cont">
+                    <img class="product-img" 
+                        fxLayoutAlign="center center"
+                        [src]="product.imgUrl"/>
+                </div>
+                <div class="product-deets">
+                        <div class="product-title">{{product.productName}}</div>
+                        <div class="product-price">${{product.price}}</div>
+                        <!--actions-->
+                        <div class="product-actions" fxLayout="row">
+                            <button (click)="buyNow(product)" mat-flat-button color="primary">Buy Now</button>
+                            <div fxFlex></div>
+                        </div>
+                </div>
+            </div>
+            </ng-container>
+            <!------->
+        </div>
+</section>

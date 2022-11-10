@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Order Summary</h2>
+
+<mat-dialog-content class="mat-typography">
+  
+  <!--order summary (include: interpolation)-->
+  <div class="order-summary-deets mb-5" fxLayout="row">
+      <!--img-->
+      <img fxFlex="15" class="mr-5"
+           [src]="data.imgUrl"/>  <!--one way binding : property binding -->
+
+      <!-- product name-->
+      <div fxFlex class="" fxLayoutAlign="start center">{{data.productName}}</div> <!--one way binding : interpolation -->
+      <!-- quantity-->
+      <div fxFlex="15" class="mr-5">
+        <mat-form-field style="width: 100%;" appearance="fill">
+          <mat-label>Qty</mat-label>
+          <input matInput [(ngModel)]="itemQty" type="number"> <!--two way binding : ngModel -->
+        </mat-form-field>
+      </div>
+      <!-- total price-->
+      <div fxFlex="15" fxLayoutAlign="start center">${{itemQty * data.price | number: '1.2'}}</div> <!--one way binding : interpolation -->
+  </div>
+
+  <h3>Shipping Details</h3>
+
+  <!--form (include: form controls)-->
+  <form [formGroup]="formGroup" fxLayout="column">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" 
+             matInput placeholder="First Name, Last Name">
+      <mat-error *ngIf="formGroup.controls.name.hasError('required')">Name is Required</mat-error>       
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St" formControlName="address"></textarea>
+    </mat-form-field>
+
+  </form>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions fxLayout="row">
+  <button (click)="save()" 
+          [disabled]="formGroup.invalid"
+          mat-flat-button color="primary">Save</button>
+  <div fxFlex></div>
+  <button (click)="close()" mat-flat-button >Cancel</button>
+</mat-dialog-actions>

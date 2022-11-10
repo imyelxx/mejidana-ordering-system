@@ -1,0 +1,34 @@
+.management-container {
+    padding: 1.5em 5em;
+    font-family: Poppins;
+
+    .mgt-title { font-size: 20px;}
+    .btn-action {
+        min-width: 0;
+        width: 37px;
+        padding: 0;
+
+        .action-icon { font-size: 21px !important; margin: auto}
+
+    }
+
+    .pill {
+        border-radius: 25px;
+        background: darkgray;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .pill-Pending_Payment { background: #f7b90f; }
+    .pill-For_Shipment { background: #0091ff; }
+    .pill-Order_Received { background: #c42950; }
+    .pill-Active { background: #00a63d; }
+}
+
+::ng-deep.mat-column-action {
+    width: 136px;
+}
+
+.mr-3 { margin-right: 0.5em}
